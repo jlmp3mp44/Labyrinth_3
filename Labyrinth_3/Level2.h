@@ -1,5 +1,6 @@
 #pragma once
 
+
 namespace Labyrinth3 {
 
 	using namespace System;
@@ -72,6 +73,7 @@ namespace Labyrinth3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Level2::typeid));
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());

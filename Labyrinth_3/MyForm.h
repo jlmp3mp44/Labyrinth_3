@@ -383,20 +383,21 @@ namespace Labyrinth3 {
 		  }
 
 		  else {
-			  String^ savedNameMain = nameMain;
+			
+			  String^ nameNow = "b";
 			  for (int i = 0; i < rectangles->Count; i++) {
-				  //Rectangle^ rectBoundsVkaz = rectangles[i]->Bounds;
 				  Rectangle rectBounds = rectangles[i]->Bounds;
-				  String^ nameNow = rectangles[i]->Name;
-				  if (this->cat->Bounds.IntersectsWith(rectBounds) && (nameNow->Equals(savedNameMain))) {
-					  System::Console::WriteLine(savedNameMain); // Виводимо nameMain
+				  if (this->cat->Bounds.IntersectsWith(rectBounds) &&
+					  ((String::Equals(nameMain, nameNow, StringComparison::OrdinalIgnoreCase))!=0)) {
+					  nameNow = rectangles[i]->Name;
+					  System::Console::WriteLine(nameMain); // Виводимо nameMain
 					  System::Console::WriteLine(nameNow);
 					  std::cout << i << std::endl;
-					  nameMain = nameNow; // Оновлюємо посилання на новий прямокутник
 					  accept_move = false;
 					  break;
 				  }
 			  }
+			  nameMain = nameNow;
 		  }
 	  }
   }
