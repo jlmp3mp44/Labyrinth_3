@@ -1,4 +1,6 @@
 #pragma once
+#include "BaseForm.h"
+
 
 
 namespace Labyrinth3 {
@@ -13,7 +15,7 @@ namespace Labyrinth3 {
 	/// <summary>
 	/// Summary for Level2
 	/// </summary>
-	public ref class Level2 : public System::Windows::Forms::Form
+	public ref class Level2 : public BaseForm
 	{
 	public:
 		Level2(void)
@@ -45,20 +47,35 @@ namespace Labyrinth3 {
 	private: System::Windows::Forms::PictureBox^ cat;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::FlowLayoutPanel^ Panel8;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel2;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel3;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel4;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel5;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel6;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel7;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel8;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel9;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel10;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel11;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel12;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel13;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel14;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel1;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel2;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel3;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel4;
+
+
+
+
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel5;
+
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel6;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel7;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel15;
+
+
+
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel9;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel10;
+
+
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel11;
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel12;
+
+
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel13;
+
+	private: System::Windows::Forms::FlowLayoutPanel^ Panel14;
+	private: System::Windows::Forms::Panel^ Exit;
+
 
 	private:
 		/// <summary>
@@ -73,7 +90,6 @@ namespace Labyrinth3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Level2::typeid));
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
@@ -84,20 +100,21 @@ namespace Labyrinth3 {
 			this->cat = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Panel8 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel2 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel3 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel4 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel5 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel6 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel7 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel8 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel9 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel10 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel11 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel12 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel13 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel14 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel2 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel3 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel4 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel5 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel6 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel7 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel15 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel9 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel10 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel11 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel12 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel13 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Panel14 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->Exit = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
@@ -173,7 +190,7 @@ namespace Labyrinth3 {
 			this->cat->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"cat.Image")));
 			this->cat->Location = System::Drawing::Point(110, 497);
 			this->cat->Name = L"cat";
-			this->cat->Size = System::Drawing::Size(101, 89);
+			this->cat->Size = System::Drawing::Size(70, 50);
 			this->cat->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->cat->TabIndex = 20;
 			this->cat->TabStop = false;
@@ -198,117 +215,124 @@ namespace Labyrinth3 {
 			this->Panel8->Size = System::Drawing::Size(125, 41);
 			this->Panel8->TabIndex = 22;
 			// 
-			// flowLayoutPanel1
+			// Panel1
 			// 
-			this->flowLayoutPanel1->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel1->Location = System::Drawing::Point(180, 298);
-			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
-			this->flowLayoutPanel1->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel1->TabIndex = 23;
+			this->Panel1->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel1->Location = System::Drawing::Point(180, 298);
+			this->Panel1->Name = L"Panel1";
+			this->Panel1->Size = System::Drawing::Size(45, 131);
+			this->Panel1->TabIndex = 23;
 			// 
-			// flowLayoutPanel2
+			// Panel2
 			// 
-			this->flowLayoutPanel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel2->Location = System::Drawing::Point(98, 281);
-			this->flowLayoutPanel2->Name = L"flowLayoutPanel2";
-			this->flowLayoutPanel2->Size = System::Drawing::Size(127, 42);
-			this->flowLayoutPanel2->TabIndex = 24;
+			this->Panel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel2->Location = System::Drawing::Point(98, 281);
+			this->Panel2->Name = L"Panel2";
+			this->Panel2->Size = System::Drawing::Size(127, 42);
+			this->Panel2->TabIndex = 24;
 			// 
-			// flowLayoutPanel3
+			// Panel3
 			// 
-			this->flowLayoutPanel3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel3->Location = System::Drawing::Point(180, 120);
-			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
-			this->flowLayoutPanel3->Size = System::Drawing::Size(45, 172);
-			this->flowLayoutPanel3->TabIndex = 25;
+			this->Panel3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel3->Location = System::Drawing::Point(180, 120);
+			this->Panel3->Name = L"Panel3";
+			this->Panel3->Size = System::Drawing::Size(45, 172);
+			this->Panel3->TabIndex = 25;
 			// 
-			// flowLayoutPanel4
+			// Panel4
 			// 
-			this->flowLayoutPanel4->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel4->Location = System::Drawing::Point(315, 412);
-			this->flowLayoutPanel4->Name = L"flowLayoutPanel4";
-			this->flowLayoutPanel4->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel4->TabIndex = 26;
+			this->Panel4->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel4->Location = System::Drawing::Point(315, 412);
+			this->Panel4->Name = L"Panel4";
+			this->Panel4->Size = System::Drawing::Size(45, 131);
+			this->Panel4->TabIndex = 26;
 			// 
-			// flowLayoutPanel5
+			// Panel5
 			// 
-			this->flowLayoutPanel5->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel5->Location = System::Drawing::Point(315, 281);
-			this->flowLayoutPanel5->Name = L"flowLayoutPanel5";
-			this->flowLayoutPanel5->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel5->TabIndex = 7;
+			this->Panel5->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel5->Location = System::Drawing::Point(315, 281);
+			this->Panel5->Name = L"Panel5";
+			this->Panel5->Size = System::Drawing::Size(45, 131);
+			this->Panel5->TabIndex = 7;
 			// 
-			// flowLayoutPanel6
+			// Panel6
 			// 
-			this->flowLayoutPanel6->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel6->Location = System::Drawing::Point(315, 161);
-			this->flowLayoutPanel6->Name = L"flowLayoutPanel6";
-			this->flowLayoutPanel6->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel6->TabIndex = 7;
+			this->Panel6->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel6->Location = System::Drawing::Point(315, 161);
+			this->Panel6->Name = L"Panel6";
+			this->Panel6->Size = System::Drawing::Size(45, 131);
+			this->Panel6->TabIndex = 7;
 			// 
-			// flowLayoutPanel7
+			// Panel7
 			// 
-			this->flowLayoutPanel7->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel7->Location = System::Drawing::Point(315, 370);
-			this->flowLayoutPanel7->Name = L"flowLayoutPanel7";
-			this->flowLayoutPanel7->Size = System::Drawing::Size(123, 42);
-			this->flowLayoutPanel7->TabIndex = 27;
+			this->Panel7->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel7->Location = System::Drawing::Point(315, 370);
+			this->Panel7->Name = L"Panel7";
+			this->Panel7->Size = System::Drawing::Size(123, 42);
+			this->Panel7->TabIndex = 27;
 			// 
-			// flowLayoutPanel8
+			// Panel15
 			// 
-			this->flowLayoutPanel8->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel8->Location = System::Drawing::Point(434, 54);
-			this->flowLayoutPanel8->Name = L"flowLayoutPanel8";
-			this->flowLayoutPanel8->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel8->TabIndex = 28;
+			this->Panel15->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel15->Location = System::Drawing::Point(434, 54);
+			this->Panel15->Name = L"Panel15";
+			this->Panel15->Size = System::Drawing::Size(45, 131);
+			this->Panel15->TabIndex = 28;
 			// 
-			// flowLayoutPanel9
+			// Panel9
 			// 
-			this->flowLayoutPanel9->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel9->Location = System::Drawing::Point(434, 180);
-			this->flowLayoutPanel9->Name = L"flowLayoutPanel9";
-			this->flowLayoutPanel9->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel9->TabIndex = 29;
+			this->Panel9->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel9->Location = System::Drawing::Point(434, 180);
+			this->Panel9->Name = L"Panel9";
+			this->Panel9->Size = System::Drawing::Size(45, 131);
+			this->Panel9->TabIndex = 29;
 			// 
-			// flowLayoutPanel10
+			// Panel10
 			// 
-			this->flowLayoutPanel10->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel10->Location = System::Drawing::Point(557, 264);
-			this->flowLayoutPanel10->Name = L"flowLayoutPanel10";
-			this->flowLayoutPanel10->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel10->TabIndex = 30;
+			this->Panel10->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel10->Location = System::Drawing::Point(557, 264);
+			this->Panel10->Name = L"Panel10";
+			this->Panel10->Size = System::Drawing::Size(45, 131);
+			this->Panel10->TabIndex = 30;
 			// 
-			// flowLayoutPanel11
+			// Panel11
 			// 
-			this->flowLayoutPanel11->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel11->Location = System::Drawing::Point(434, 370);
-			this->flowLayoutPanel11->Name = L"flowLayoutPanel11";
-			this->flowLayoutPanel11->Size = System::Drawing::Size(45, 102);
-			this->flowLayoutPanel11->TabIndex = 31;
+			this->Panel11->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel11->Location = System::Drawing::Point(434, 370);
+			this->Panel11->Name = L"Panel11";
+			this->Panel11->Size = System::Drawing::Size(45, 102);
+			this->Panel11->TabIndex = 31;
 			// 
-			// flowLayoutPanel12
+			// Panel12
 			// 
-			this->flowLayoutPanel12->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel12->Location = System::Drawing::Point(557, 264);
-			this->flowLayoutPanel12->Name = L"flowLayoutPanel12";
-			this->flowLayoutPanel12->Size = System::Drawing::Size(94, 47);
-			this->flowLayoutPanel12->TabIndex = 32;
+			this->Panel12->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel12->Location = System::Drawing::Point(557, 264);
+			this->Panel12->Name = L"Panel12";
+			this->Panel12->Size = System::Drawing::Size(94, 47);
+			this->Panel12->TabIndex = 32;
 			// 
-			// flowLayoutPanel13
+			// Panel13
 			// 
-			this->flowLayoutPanel13->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel13->Location = System::Drawing::Point(557, 385);
-			this->flowLayoutPanel13->Name = L"flowLayoutPanel13";
-			this->flowLayoutPanel13->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel13->TabIndex = 33;
+			this->Panel13->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel13->Location = System::Drawing::Point(557, 385);
+			this->Panel13->Name = L"Panel13";
+			this->Panel13->Size = System::Drawing::Size(45, 131);
+			this->Panel13->TabIndex = 33;
 			// 
-			// flowLayoutPanel14
+			// Panel14
 			// 
-			this->flowLayoutPanel14->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->flowLayoutPanel14->Location = System::Drawing::Point(63, 401);
-			this->flowLayoutPanel14->Name = L"flowLayoutPanel14";
-			this->flowLayoutPanel14->Size = System::Drawing::Size(45, 131);
-			this->flowLayoutPanel14->TabIndex = 34;
+			this->Panel14->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->Panel14->Location = System::Drawing::Point(63, 401);
+			this->Panel14->Name = L"Panel14";
+			this->Panel14->Size = System::Drawing::Size(45, 131);
+			this->Panel14->TabIndex = 34;
+			// 
+			// Exit
+			// 
+			this->Exit->Location = System::Drawing::Point(636, 120);
+			this->Exit->Name = L"Exit";
+			this->Exit->Size = System::Drawing::Size(74, 100);
+			this->Exit->TabIndex = 35;
 			// 
 			// Level2
 			// 
@@ -316,20 +340,21 @@ namespace Labyrinth3 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::RoyalBlue;
 			this->ClientSize = System::Drawing::Size(748, 659);
-			this->Controls->Add(this->flowLayoutPanel11);
-			this->Controls->Add(this->flowLayoutPanel14);
-			this->Controls->Add(this->flowLayoutPanel13);
-			this->Controls->Add(this->flowLayoutPanel10);
-			this->Controls->Add(this->flowLayoutPanel12);
-			this->Controls->Add(this->flowLayoutPanel9);
-			this->Controls->Add(this->flowLayoutPanel8);
-			this->Controls->Add(this->flowLayoutPanel7);
-			this->Controls->Add(this->flowLayoutPanel6);
-			this->Controls->Add(this->flowLayoutPanel5);
-			this->Controls->Add(this->flowLayoutPanel4);
-			this->Controls->Add(this->flowLayoutPanel3);
-			this->Controls->Add(this->flowLayoutPanel2);
-			this->Controls->Add(this->flowLayoutPanel1);
+			this->Controls->Add(this->Exit);
+			this->Controls->Add(this->Panel11);
+			this->Controls->Add(this->Panel14);
+			this->Controls->Add(this->Panel13);
+			this->Controls->Add(this->Panel10);
+			this->Controls->Add(this->Panel12);
+			this->Controls->Add(this->Panel9);
+			this->Controls->Add(this->Panel15);
+			this->Controls->Add(this->Panel7);
+			this->Controls->Add(this->Panel6);
+			this->Controls->Add(this->Panel5);
+			this->Controls->Add(this->Panel4);
+			this->Controls->Add(this->Panel3);
+			this->Controls->Add(this->Panel2);
+			this->Controls->Add(this->Panel1);
 			this->Controls->Add(this->Panel8);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->cat);
@@ -341,6 +366,7 @@ namespace Labyrinth3 {
 			this->Controls->Add(this->pictureBox1);
 			this->Name = L"Level2";
 			this->Text = L"Level2";
+			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Level2::Main_KeyDown);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
@@ -353,6 +379,74 @@ namespace Labyrinth3 {
 
 		}
 #pragma endregion
-		
+		bool move = false;
+		bool EndLevel = false;
+		Keys lastKeyPressed;
+		 private: System::Void Main_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+			 System::Drawing::Point catPosition = this->cat->Location;
+			 int catStartX = catPosition.X; // Координата X елемента cat
+			 int catStartY = catPosition.Y;
+			 move = false;
+			 if (e->KeyCode == Keys::Up && keyUp) {
+				 this->cat->Location = System::Drawing::Point(catStartX, catStartY - 10);
+				 lastKeyPressed = Keys::Up;
+				 move = true;
+				 keyDown = keyLeft = keyRight = true;
+			 }
+			 else if (e->KeyCode == Keys::Down && keyDown) {
+				 this->cat->Location = System::Drawing::Point(catStartX, catStartY + 10);
+				 move = true;
+				 lastKeyPressed = Keys::Down;
+				 keyLeft = keyUp = keyRight = true;
+			 }
+			 else if (e->KeyCode == Keys::Left && keyLeft) {
+				 this->cat->Location = System::Drawing::Point(catStartX - 10, catStartY);
+				 move = true;
+				 lastKeyPressed = Keys::Left;
+				 keyDown = keyUp = keyRight = true;
+			 }
+			 else if (e->KeyCode == Keys::Right && keyRight) {
+				 this->cat->Location = System::Drawing::Point(catStartX + 10, catStartY);
+				 move = true;
+				 lastKeyPressed = Keys::Right;
+				 keyDown = keyLeft = keyUp = true;
+			 }
+
+			 if (e->KeyCode == Keys::Space) {
+				 keyDown = keyLeft = keyUp = keyRight = true;
+
+			 }
+			System::Collections::Generic::List<Panel^>^ rectangles = allRect();
+			Check_Bounds(rectangles, this->cat, this->Exit, move,
+				 EndLevel, System::Drawing::Color::Aqua, lastKeyPressed);
+			if (EndLevel) {
+				score += 20;
+				String^ scoreStr = score.ToString();
+				MessageBox::Show(this, "You pass the level, YOUR SCORE", scoreStr);
+				//new_Level();
+			}
+		}
+	public: virtual System::Collections::Generic::List<Panel^>^ allRect() override {
+				   System::Collections::Generic::List<Panel^>^ rectangles
+					   = gcnew System::Collections::Generic::List<Panel^>();
+				   rectangles->Add(Panel1);
+				   rectangles->Add(Panel2);
+				   rectangles->Add(Panel3);
+				   rectangles->Add(Panel4);
+				   rectangles->Add(Panel5);
+				   rectangles->Add(Panel6);
+				   rectangles->Add(Panel7);
+				   rectangles->Add(Panel8);
+				   rectangles->Add(Panel9);
+				   rectangles->Add(Panel10);
+				   rectangles->Add(Panel11);
+				   rectangles->Add(Panel12);
+				   rectangles->Add(Panel13);
+				   rectangles->Add(Panel14);
+				   rectangles->Add(Panel15);
+				   return rectangles;
+			   }
+
+	
 	};
 }

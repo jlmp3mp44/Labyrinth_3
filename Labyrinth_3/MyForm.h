@@ -4,6 +4,7 @@
 #include <cliext/adapter>
 #include <iostream>
 #include "Level2.h"
+#include "BaseForm.h"
 
 namespace Labyrinth3 {
 
@@ -17,7 +18,7 @@ namespace Labyrinth3 {
 	/// <summary>
 	/// Summary for main
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
+	public ref class MyForm : public BaseForm
 	{
 	public:
 		MyForm(void)
@@ -39,6 +40,7 @@ namespace Labyrinth3 {
 				delete components;
 			}
 		}
+	
 	private: System::Windows::Forms::FlowLayoutPanel^ Panel1;
 	protected:
 
@@ -264,7 +266,7 @@ namespace Labyrinth3 {
 			this->cat->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"cat.Image")));
 			this->cat->Location = System::Drawing::Point(152, 459);
 			this->cat->Name = L"cat";
-			this->cat->Size = System::Drawing::Size(101, 89);
+			this->cat->Size = System::Drawing::Size(85, 65);
 			this->cat->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->cat->TabIndex = 0;
 			this->cat->TabStop = false;
@@ -332,77 +334,58 @@ namespace Labyrinth3 {
 		}
 #pragma endregion
 		bool move = false;
-		bool accept_move = true;
-		Keys lastPressed;
-		String^ nameMain = "a"; // Змінна для збереження посилання на поточний прямокутник
 		bool EndLevel = false;
+		Keys lastKeyPressed;
   private: System::Void main_Load(System::Object^ sender, System::EventArgs^ e) {
 
   }
-
+		
   private: System::Void Main_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 	  System::Drawing::Point catPosition = this->cat->Location;
 	  int catStartX = catPosition.X; // Координата X елемента cat
 	  int catStartY = catPosition.Y;
 	  move = false;
-
-	  if (e->KeyCode == Keys::Up && accept_move) {
+	  if (e->KeyCode == Keys::Up && keyUp) {
 		  this->cat->Location = System::Drawing::Point(catStartX, catStartY - 10);
+		  lastKeyPressed = Keys::Up;
 		  move = true;
+		  keyDown = keyLeft  = keyRight = true;
 	  }
-	  else if (e->KeyCode == Keys::Down && accept_move) {
+	  else if (e->KeyCode == Keys::Down && keyDown) {
 		  this->cat->Location = System::Drawing::Point(catStartX, catStartY + 10);
 		  move = true;
+		  lastKeyPressed = Keys::Down;
+		   keyLeft = keyUp = keyRight = true;
 	  }
-	  else if (e->KeyCode == Keys::Left && accept_move) {
+	  else if (e->KeyCode == Keys::Left && keyLeft) {
 		  this->cat->Location = System::Drawing::Point(catStartX - 10, catStartY);
 		  move = true;
+		  lastKeyPressed = Keys::Left;
+		  keyDown  = keyUp = keyRight = true;
 	  }
-	  else if (e->KeyCode == Keys::Right && accept_move) {
+	  else if (e->KeyCode == Keys::Right && keyRight) {
 		  this->cat->Location = System::Drawing::Point(catStartX + 10, catStartY);
 		  move = true;
+		  lastKeyPressed = Keys::Right;
+		  keyDown = keyLeft = keyUp  = true;
 	  }
 
 	  if (e->KeyCode == Keys::Space) {
-		  accept_move = true;
+		  keyDown = keyLeft = keyUp = keyRight = true;
 
 	  }
-	  Check_Bounds();
-  }
-
-  private: System::Void Check_Bounds() {
 	  System::Collections::Generic::List<Panel^>^ rectangles = allRect();
-
-
-	  if (move && accept_move) {
-		  if (this->cat->Bounds.IntersectsWith(this->Exit->Bounds)) {
-			  this->Exit->BackColor = System::Drawing::Color::Blue;
-			  EndLevel = true;
-			  MessageBox::Show(this, "You pass the level");
-			  new_Level();
-		  }
-
-		  else {
-			
-			  String^ nameNow = "b";
-			  for (int i = 0; i < rectangles->Count; i++) {
-				  Rectangle rectBounds = rectangles[i]->Bounds;
-				  if (this->cat->Bounds.IntersectsWith(rectBounds) &&
-					  ((String::Equals(nameMain, nameNow, StringComparison::OrdinalIgnoreCase))!=0)) {
-					  nameNow = rectangles[i]->Name;
-					  System::Console::WriteLine(nameMain); // Виводимо nameMain
-					  System::Console::WriteLine(nameNow);
-					  std::cout << i << std::endl;
-					  accept_move = false;
-					  break;
-				  }
-			  }
-			  nameMain = nameNow;
-		  }
+	  Check_Bounds(rectangles,this->cat, this->Exit, move,
+		 EndLevel,System::Drawing::Color::Blue, lastKeyPressed);
+	  if (EndLevel) {
+		  score += 10;
+		  String^ scoreStr = score.ToString();
+		  MessageBox::Show(this, "You pass the level, YOUR SCORE", scoreStr);
+		  new_Level();
 	  }
   }
 
-		 System::Collections::Generic::List<Panel^>^ allRect() {
+		 public: virtual System::Collections::Generic::List<Panel^>^ allRect() override {
 			 System::Collections::Generic::List<Panel^>^ rectangles
 				 = gcnew System::Collections::Generic::List<Panel^>();
 			 rectangles->Add(Panel1);
@@ -419,10 +402,11 @@ namespace Labyrinth3 {
 		 }
 
 		
-void new_Level() {
+ void new_Level()  {
 	Level2^ level2 = gcnew Level2();
 	level2->Show();
 	MyForm::Hide();
 }
+
 };
 }
