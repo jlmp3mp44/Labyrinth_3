@@ -192,7 +192,7 @@ namespace Labyrinth3 {
 			this->cat->Name = L"cat";
 			this->cat->Size = System::Drawing::Size(70, 50);
 			this->cat->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->cat->TabIndex = 20;
+			this->cat->TabIndex = 0;
 			this->cat->TabStop = false;
 			// 
 			// label1
@@ -412,12 +412,10 @@ namespace Labyrinth3 {
 				 keyDown = keyLeft = keyUp = true;
 			 }
 
-			 if (e->KeyCode == Keys::Space) {
-				 keyDown = keyLeft = keyUp = keyRight = true;
-
-			 }
 			System::Collections::Generic::List<Panel^>^ rectangles = allRect();
-			Check_Bounds(rectangles, this->cat, this->Exit, move,
+			System::Collections::Generic::List<PictureBox^>^ outRectangles = allOutRect(pictureBox1, pictureBox2,
+				pictureBox3, pictureBox4, pictureBox5, pictureBox6);
+			Check_Bounds(rectangles,outRectangles, this->cat, this->Exit, move,
 				 EndLevel, System::Drawing::Color::Aqua, lastKeyPressed);
 			if (EndLevel) {
 				score += 20;

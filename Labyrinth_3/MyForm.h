@@ -369,13 +369,10 @@ namespace Labyrinth3 {
 		  lastKeyPressed = Keys::Right;
 		  keyDown = keyLeft = keyUp  = true;
 	  }
-
-	  if (e->KeyCode == Keys::Space) {
-		  keyDown = keyLeft = keyUp = keyRight = true;
-
-	  }
 	  System::Collections::Generic::List<Panel^>^ rectangles = allRect();
-	  Check_Bounds(rectangles,this->cat, this->Exit, move,
+	  System::Collections::Generic::List<PictureBox^>^ outRectangles = allOutRect(pictureBox1, pictureBox2,
+		  pictureBox3, pictureBox4, pictureBox5, pictureBox6);
+	  Check_Bounds(rectangles, outRectangles, this->cat, this->Exit, move,
 		 EndLevel,System::Drawing::Color::Blue, lastKeyPressed);
 	  if (EndLevel) {
 		  score += 10;
@@ -400,6 +397,7 @@ namespace Labyrinth3 {
 			 rectangles->Add(Panel10);
 			 return rectangles;
 		 }
+		
 
 		
  void new_Level()  {

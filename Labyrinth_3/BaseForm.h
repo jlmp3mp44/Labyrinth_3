@@ -70,6 +70,7 @@ namespace Labyrinth3 {
 #pragma endregion
 	public: void Check_Bounds
 		  (System ::Collections::Generic::List<Panel^>^ rectangles,
+			  System::Collections::Generic::List<PictureBox^>^ outRectangles,
 		PictureBox^% cat, Panel^% Exit,
 		bool% move, bool% EndLevel,
 		Color color, Keys% lastKeyPressed) {
@@ -98,6 +99,20 @@ namespace Labyrinth3 {
 						break;
 					}
 				}
+				for (int i = 0; i < outRectangles->Count; i++) {
+					Rectangle outRectBounds = outRectangles[i]->Bounds;
+					if (cat->Bounds.IntersectsWith(outRectBounds)) {
+						switch (lastKeyPressed) {
+						case Keys::Up: keyUp = false; break;
+						case Keys::Down: keyDown = false; break;
+						case Keys::Left: keyLeft = false; break;
+						case Keys::Right: keyRight = false; break;
+						default: return;
+						}
+
+						break;
+					}
+				}
 			}
 		}
 	}
@@ -107,7 +122,22 @@ namespace Labyrinth3 {
 	{
 		System::Collections::Generic::List<System::Windows::Forms::Panel^>^ rectangles
 			= gcnew System::Collections::Generic::List<System::Windows::Forms::Panel^>();
-		
+
+		return rectangles;
+	}
+	
+	public:  System::Collections::Generic::List<PictureBox^>^ allOutRect(PictureBox^ pictureBox1,
+		PictureBox^ pictureBox2, PictureBox^ pictureBox3,
+		PictureBox^ pictureBox4, PictureBox^ pictureBox5,
+		PictureBox^ pictureBox6) {
+		System::Collections::Generic::List<PictureBox^>^ rectangles
+			= gcnew System::Collections::Generic::List<PictureBox^>();
+		rectangles->Add(pictureBox1);
+		rectangles->Add(pictureBox2);
+		rectangles->Add(pictureBox3);
+		rectangles->Add(pictureBox4);
+		rectangles->Add(pictureBox5);
+		rectangles->Add(pictureBox6);
 		return rectangles;
 	}
 	
