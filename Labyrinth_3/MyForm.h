@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Level2.h"
 #include "BaseForm.h"
+#include <string>
+#include <sstream>
 
 namespace Labyrinth3 {
 
@@ -374,13 +376,13 @@ namespace Labyrinth3 {
 		  pictureBox3, pictureBox4, pictureBox5, pictureBox6);
 	  Check_Bounds(rectangles, outRectangles, this->cat, this->Exit, move,
 		 EndLevel,System::Drawing::Color::Blue, lastKeyPressed);
+
 	  if (EndLevel) {
-		  score += 10;
-		  String^ scoreStr = score.ToString();
-		  MessageBox::Show(this, "You pass the level, YOUR SCORE", scoreStr);
+		  ShowMessageBox(10);
 		  new_Level();
 	  }
   }
+
 
 		 public: virtual System::Collections::Generic::List<Panel^>^ allRect() override {
 			 System::Collections::Generic::List<Panel^>^ rectangles

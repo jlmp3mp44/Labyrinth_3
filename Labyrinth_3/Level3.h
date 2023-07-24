@@ -62,6 +62,7 @@ namespace Labyrinth3 {
 	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel16;
 	private: System::Windows::Forms::PictureBox^ cat;
 	private: System::Windows::Forms::Panel^ Exit;
+	private: System::Windows::Forms::Label^ label1;
 
 
 
@@ -104,6 +105,7 @@ namespace Labyrinth3 {
 			this->flowLayoutPanel16 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->cat = (gcnew System::Windows::Forms::PictureBox());
 			this->Exit = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
@@ -327,12 +329,25 @@ namespace Labyrinth3 {
 			this->Exit->Size = System::Drawing::Size(95, 82);
 			this->Exit->TabIndex = 57;
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::HotPink;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label1->Location = System::Drawing::Point(483, 679);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(164, 50);
+			this->label1->TabIndex = 58;
+			this->label1->Text = L"LEVEL 3";
+			// 
 			// Level3
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Aqua;
-			this->ClientSize = System::Drawing::Size(831, 719);
+			this->ClientSize = System::Drawing::Size(840, 748);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->flowLayoutPanel16);
 			this->Controls->Add(this->flowLayoutPanel11);
 			this->Controls->Add(this->flowLayoutPanel5);
@@ -369,6 +384,7 @@ namespace Labyrinth3 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->cat))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -412,10 +428,8 @@ namespace Labyrinth3 {
 			 Check_Bounds(rectangles, outRectangles, this->cat, this->Exit, move,
 				 EndLevel, System::Drawing::Color::IndianRed, lastKeyPressed);
 			 if (EndLevel) {
-				 score += 20;
-				 String^ scoreStr = score.ToString();
-				 MessageBox::Show(this, "You pass the level, YOUR SCORE", scoreStr);
-				 //new_Level();
+				 ShowMessageBox(30);
+				 
 			 }
 		 }
 	public: virtual System::Collections::Generic::List<Panel^>^ allRect() override {
@@ -439,6 +453,7 @@ namespace Labyrinth3 {
 		rectangles->Add(flowLayoutPanel16);
 		return rectangles;
 	}
+
 
 };
 }

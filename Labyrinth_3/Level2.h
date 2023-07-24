@@ -419,9 +419,7 @@ namespace Labyrinth3 {
 			Check_Bounds(rectangles,outRectangles, this->cat, this->Exit, move,
 				 EndLevel, System::Drawing::Color::Aqua, lastKeyPressed);
 			if (EndLevel) {
-				score += 20;
-				String^ scoreStr = score.ToString();
-				MessageBox::Show(this, "You pass the level, YOUR SCORE", scoreStr);
+				ShowMessageBox(20);
 				new_Level();
 			}
 		}

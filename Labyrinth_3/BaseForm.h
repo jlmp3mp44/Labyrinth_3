@@ -65,7 +65,7 @@ namespace Labyrinth3 {
 			this->ResumeLayout(false);
 
 		}
-    public: static int score = 0;
+	public: static int score = 0;
 	public: bool keyLeft = true;
 		  bool keyRight = true;
 		  bool keyDown =  true;
@@ -83,7 +83,8 @@ namespace Labyrinth3 {
 			if (cat->Bounds.IntersectsWith(Exit->Bounds)) {
 				Exit->BackColor = color;
 				EndLevel = true;
-				//new_Level();
+				PlayAudio(L"D:/C++/Labyrinth_3/audio/meow.wav");
+				Sleep(300);
 				return;
 			}
 
@@ -91,6 +92,7 @@ namespace Labyrinth3 {
 				for (int i = 0; i < rectangles->Count; i++) {
 					Labyrinth3::Rectangle rectBounds = rectangles[i]->Bounds;
 					if (cat->Bounds.IntersectsWith(rectBounds)) {
+						minusScore(score);
 						switch (lastKeyPressed) {
 						case Keys::Up: keyUp = false; break;
 						case Keys::Down: keyDown = false; break;
@@ -143,7 +145,20 @@ namespace Labyrinth3 {
 		rectangles->Add(pictureBox6);
 		return rectangles;
 	}
-	
+	public: void PlayAudio(const wchar_t* audioFilePath) {
+			  PlaySound(audioFilePath, NULL, SND_FILENAME | SND_ASYNC);
+		  }
+
+	 public: void ShowMessageBox(int changeScore) {
+			 score += changeScore;
+			 String^ message = score.ToString();
+			 MessageBox::Show(message, "YOUR SCORE", MessageBoxButtons::OK);	 
+	 }
+	 public: void minusScore(int% score) {
+		 score -= 1;
+		 
+	 }
+     
 	
 	};
 }
