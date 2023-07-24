@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseForm.h"
+#include "Level3.h"
 
 
 
@@ -15,7 +16,7 @@ namespace Labyrinth3 {
 	/// <summary>
 	/// Summary for Level2
 	/// </summary>
-	public ref class Level2 : public BaseForm
+	public ref class Level2 : BaseForm
 	{
 	public:
 		Level2(void)
@@ -188,11 +189,11 @@ namespace Labyrinth3 {
 			// 
 			this->cat->BackColor = System::Drawing::Color::Transparent;
 			this->cat->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"cat.Image")));
-			this->cat->Location = System::Drawing::Point(110, 497);
+			this->cat->Location = System::Drawing::Point(131, 497);
 			this->cat->Name = L"cat";
-			this->cat->Size = System::Drawing::Size(70, 50);
+			this->cat->Size = System::Drawing::Size(69, 62);
 			this->cat->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->cat->TabIndex = 0;
+			this->cat->TabIndex = 20;
 			this->cat->TabStop = false;
 			// 
 			// label1
@@ -212,7 +213,7 @@ namespace Labyrinth3 {
 			this->Panel8->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->Panel8->Location = System::Drawing::Point(100, 401);
 			this->Panel8->Name = L"Panel8";
-			this->Panel8->Size = System::Drawing::Size(125, 41);
+			this->Panel8->Size = System::Drawing::Size(112, 41);
 			this->Panel8->TabIndex = 22;
 			// 
 			// Panel1
@@ -220,7 +221,7 @@ namespace Labyrinth3 {
 			this->Panel1->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->Panel1->Location = System::Drawing::Point(180, 298);
 			this->Panel1->Name = L"Panel1";
-			this->Panel1->Size = System::Drawing::Size(45, 131);
+			this->Panel1->Size = System::Drawing::Size(32, 131);
 			this->Panel1->TabIndex = 23;
 			// 
 			// Panel2
@@ -228,7 +229,7 @@ namespace Labyrinth3 {
 			this->Panel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->Panel2->Location = System::Drawing::Point(98, 281);
 			this->Panel2->Name = L"Panel2";
-			this->Panel2->Size = System::Drawing::Size(127, 42);
+			this->Panel2->Size = System::Drawing::Size(114, 42);
 			this->Panel2->TabIndex = 24;
 			// 
 			// Panel3
@@ -236,7 +237,7 @@ namespace Labyrinth3 {
 			this->Panel3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->Panel3->Location = System::Drawing::Point(180, 120);
 			this->Panel3->Name = L"Panel3";
-			this->Panel3->Size = System::Drawing::Size(45, 172);
+			this->Panel3->Size = System::Drawing::Size(32, 172);
 			this->Panel3->TabIndex = 25;
 			// 
 			// Panel4
@@ -252,7 +253,7 @@ namespace Labyrinth3 {
 			this->Panel5->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->Panel5->Location = System::Drawing::Point(315, 281);
 			this->Panel5->Name = L"Panel5";
-			this->Panel5->Size = System::Drawing::Size(45, 131);
+			this->Panel5->Size = System::Drawing::Size(32, 131);
 			this->Panel5->TabIndex = 7;
 			// 
 			// Panel6
@@ -260,45 +261,45 @@ namespace Labyrinth3 {
 			this->Panel6->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->Panel6->Location = System::Drawing::Point(315, 161);
 			this->Panel6->Name = L"Panel6";
-			this->Panel6->Size = System::Drawing::Size(45, 131);
+			this->Panel6->Size = System::Drawing::Size(32, 131);
 			this->Panel6->TabIndex = 7;
 			// 
 			// Panel7
 			// 
 			this->Panel7->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->Panel7->Location = System::Drawing::Point(315, 370);
+			this->Panel7->Location = System::Drawing::Point(315, 365);
 			this->Panel7->Name = L"Panel7";
-			this->Panel7->Size = System::Drawing::Size(123, 42);
+			this->Panel7->Size = System::Drawing::Size(123, 47);
 			this->Panel7->TabIndex = 27;
 			// 
 			// Panel15
 			// 
 			this->Panel15->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->Panel15->Location = System::Drawing::Point(434, 54);
+			this->Panel15->Location = System::Drawing::Point(449, 54);
 			this->Panel15->Name = L"Panel15";
-			this->Panel15->Size = System::Drawing::Size(45, 131);
+			this->Panel15->Size = System::Drawing::Size(30, 131);
 			this->Panel15->TabIndex = 28;
 			// 
 			// Panel9
 			// 
 			this->Panel9->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->Panel9->Location = System::Drawing::Point(434, 180);
+			this->Panel9->Location = System::Drawing::Point(449, 180);
 			this->Panel9->Name = L"Panel9";
-			this->Panel9->Size = System::Drawing::Size(45, 131);
+			this->Panel9->Size = System::Drawing::Size(30, 102);
 			this->Panel9->TabIndex = 29;
 			// 
 			// Panel10
 			// 
 			this->Panel10->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->Panel10->Location = System::Drawing::Point(557, 264);
+			this->Panel10->Location = System::Drawing::Point(575, 264);
 			this->Panel10->Name = L"Panel10";
-			this->Panel10->Size = System::Drawing::Size(45, 131);
+			this->Panel10->Size = System::Drawing::Size(27, 131);
 			this->Panel10->TabIndex = 30;
 			// 
 			// Panel11
 			// 
 			this->Panel11->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->Panel11->Location = System::Drawing::Point(434, 370);
+			this->Panel11->Location = System::Drawing::Point(416, 365);
 			this->Panel11->Name = L"Panel11";
 			this->Panel11->Size = System::Drawing::Size(45, 102);
 			this->Panel11->TabIndex = 31;
@@ -306,17 +307,17 @@ namespace Labyrinth3 {
 			// Panel12
 			// 
 			this->Panel12->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->Panel12->Location = System::Drawing::Point(557, 264);
+			this->Panel12->Location = System::Drawing::Point(575, 264);
 			this->Panel12->Name = L"Panel12";
-			this->Panel12->Size = System::Drawing::Size(94, 47);
+			this->Panel12->Size = System::Drawing::Size(76, 47);
 			this->Panel12->TabIndex = 32;
 			// 
 			// Panel13
 			// 
 			this->Panel13->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->Panel13->Location = System::Drawing::Point(557, 385);
+			this->Panel13->Location = System::Drawing::Point(575, 385);
 			this->Panel13->Name = L"Panel13";
-			this->Panel13->Size = System::Drawing::Size(45, 131);
+			this->Panel13->Size = System::Drawing::Size(27, 131);
 			this->Panel13->TabIndex = 33;
 			// 
 			// Panel14
@@ -331,7 +332,7 @@ namespace Labyrinth3 {
 			// 
 			this->Exit->Location = System::Drawing::Point(636, 120);
 			this->Exit->Name = L"Exit";
-			this->Exit->Size = System::Drawing::Size(74, 100);
+			this->Exit->Size = System::Drawing::Size(130, 100);
 			this->Exit->TabIndex = 35;
 			// 
 			// Level2
@@ -340,8 +341,8 @@ namespace Labyrinth3 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::RoyalBlue;
 			this->ClientSize = System::Drawing::Size(748, 659);
-			this->Controls->Add(this->Exit);
 			this->Controls->Add(this->Panel11);
+			this->Controls->Add(this->Exit);
 			this->Controls->Add(this->Panel14);
 			this->Controls->Add(this->Panel13);
 			this->Controls->Add(this->Panel10);
@@ -357,13 +358,13 @@ namespace Labyrinth3 {
 			this->Controls->Add(this->Panel1);
 			this->Controls->Add(this->Panel8);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->cat);
 			this->Controls->Add(this->pictureBox6);
 			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->cat);
 			this->Name = L"Level2";
 			this->Text = L"Level2";
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Level2::Main_KeyDown);
@@ -421,7 +422,7 @@ namespace Labyrinth3 {
 				score += 20;
 				String^ scoreStr = score.ToString();
 				MessageBox::Show(this, "You pass the level, YOUR SCORE", scoreStr);
-				//new_Level();
+				new_Level();
 			}
 		}
 	public: virtual System::Collections::Generic::List<Panel^>^ allRect() override {
@@ -444,6 +445,11 @@ namespace Labyrinth3 {
 				   rectangles->Add(Panel15);
 				   return rectangles;
 			   }
+	void new_Level() {
+			  Level3^ level3 = gcnew Level3();
+			  level3->Show();
+			  Level2::Hide();
+		  }
 
 	
 	};

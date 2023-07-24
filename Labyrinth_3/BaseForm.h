@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <Windows.h>
+#include <mmsystem.h>
+#pragma comment(lib, "winmm.lib")
 
 namespace Labyrinth3 {
 
@@ -58,7 +61,7 @@ namespace Labyrinth3 {
 			this->ClientSize = System::Drawing::Size(282, 253);
 			this->Name = L"BaseForm";
 			this->Text = L"BaseForm";
-			this->Load += gcnew System::EventHandler(this, &BaseForm::BaseForm_Load);
+			//this->Load += gcnew System::EventHandler(this, &BaseForm::BaseForm_Load);
 			this->ResumeLayout(false);
 
 		}
@@ -86,7 +89,7 @@ namespace Labyrinth3 {
 
 			else {
 				for (int i = 0; i < rectangles->Count; i++) {
-					Rectangle rectBounds = rectangles[i]->Bounds;
+					Labyrinth3::Rectangle rectBounds = rectangles[i]->Bounds;
 					if (cat->Bounds.IntersectsWith(rectBounds)) {
 						switch (lastKeyPressed) {
 						case Keys::Up: keyUp = false; break;
@@ -100,7 +103,7 @@ namespace Labyrinth3 {
 					}
 				}
 				for (int i = 0; i < outRectangles->Count; i++) {
-					Rectangle outRectBounds = outRectangles[i]->Bounds;
+					Labyrinth3::Rectangle outRectBounds = outRectangles[i]->Bounds;
 					if (cat->Bounds.IntersectsWith(outRectBounds)) {
 						switch (lastKeyPressed) {
 						case Keys::Up: keyUp = false; break;
@@ -141,7 +144,6 @@ namespace Labyrinth3 {
 		return rectangles;
 	}
 	
-	private: System::Void BaseForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
+	
 	};
 }

@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClCompile Include="BaseForm.cpp" />
     <ClCompile Include="Level2.cpp" />
+    <ClCompile Include="Level3.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +129,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Level2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Level3.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm.h">
@@ -140,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Level2.resx">
       <DependentUpon>Level2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level3.resx">
+      <DependentUpon>Level3.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
