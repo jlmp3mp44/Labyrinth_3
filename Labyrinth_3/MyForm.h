@@ -42,7 +42,7 @@ namespace Labyrinth3 {
 				delete components;
 			}
 		}
-	
+
 	private: System::Windows::Forms::FlowLayoutPanel^ Panel1;
 	protected:
 
@@ -75,6 +75,11 @@ namespace Labyrinth3 {
 	private: System::Windows::Forms::PictureBox^ cat;
 	private: System::Windows::Forms::Panel^ Exit;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::PictureBox^ pictureBox7;
+	private: System::Windows::Forms::PictureBox^ pictureBox8;
+	private: System::Windows::Forms::PictureBox^ pictureBox9;
+	private: System::Windows::Forms::PictureBox^ pictureBox10;
+	private: System::Windows::Forms::PictureBox^ pictureBox11;
 
 
 
@@ -113,6 +118,11 @@ namespace Labyrinth3 {
 			this->cat = (gcnew System::Windows::Forms::PictureBox());
 			this->Exit = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox11 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -120,6 +130,11 @@ namespace Labyrinth3 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->cat))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// Panel1
@@ -277,9 +292,9 @@ namespace Labyrinth3 {
 			// 
 			this->Exit->BackColor = System::Drawing::Color::Transparent;
 			this->Exit->ForeColor = System::Drawing::SystemColors::AppWorkspace;
-			this->Exit->Location = System::Drawing::Point(661, 106);
+			this->Exit->Location = System::Drawing::Point(686, 106);
 			this->Exit->Name = L"Exit";
-			this->Exit->Size = System::Drawing::Size(118, 93);
+			this->Exit->Size = System::Drawing::Size(93, 93);
 			this->Exit->TabIndex = 14;
 			// 
 			// label1
@@ -294,12 +309,67 @@ namespace Labyrinth3 {
 			this->label1->TabIndex = 15;
 			this->label1->Text = L"LEVEL 1";
 			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(412, 388);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(45, 48);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox7->TabIndex = 16;
+			this->pictureBox7->TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+			this->pictureBox8->Location = System::Drawing::Point(412, 186);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(45, 48);
+			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox8->TabIndex = 17;
+			this->pictureBox8->TabStop = false;
+			// 
+			// pictureBox9
+			// 
+			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+			this->pictureBox9->Location = System::Drawing::Point(87, 176);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(45, 48);
+			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox9->TabIndex = 18;
+			this->pictureBox9->TabStop = false;
+			// 
+			// pictureBox10
+			// 
+			this->pictureBox10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox10.Image")));
+			this->pictureBox10->Location = System::Drawing::Point(624, 476);
+			this->pictureBox10->Name = L"pictureBox10";
+			this->pictureBox10->Size = System::Drawing::Size(45, 48);
+			this->pictureBox10->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox10->TabIndex = 19;
+			this->pictureBox10->TabStop = false;
+			// 
+			// pictureBox11
+			// 
+			this->pictureBox11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox11.Image")));
+			this->pictureBox11->Location = System::Drawing::Point(571, 136);
+			this->pictureBox11->Name = L"pictureBox11";
+			this->pictureBox11->Size = System::Drawing::Size(45, 48);
+			this->pictureBox11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox11->TabIndex = 20;
+			this->pictureBox11->TabStop = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Aquamarine;
 			this->ClientSize = System::Drawing::Size(771, 681);
+			this->Controls->Add(this->pictureBox11);
+			this->Controls->Add(this->pictureBox10);
+			this->Controls->Add(this->pictureBox9);
+			this->Controls->Add(this->pictureBox8);
+			this->Controls->Add(this->pictureBox7);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->Panel10);
 			this->Controls->Add(this->Panel9);
@@ -330,6 +400,11 @@ namespace Labyrinth3 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->cat))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -338,69 +413,80 @@ namespace Labyrinth3 {
 		bool move = false;
 		bool EndLevel = false;
 		Keys lastKeyPressed;
-  private: System::Void main_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void main_Load(System::Object^ sender, System::EventArgs^ e) {
 
-  }
-		
-  private: System::Void Main_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-	  System::Drawing::Point catPosition = this->cat->Location;
-	  int catStartX = catPosition.X; // Координата X елемента cat
-	  int catStartY = catPosition.Y;
-	  move = false;
-	  if (e->KeyCode == Keys::Up && keyUp) {
-		  this->cat->Location = System::Drawing::Point(catStartX, catStartY - 10);
-		  lastKeyPressed = Keys::Up;
-		  move = true;
-		  keyDown = keyLeft  = keyRight = true;
-	  }
-	  else if (e->KeyCode == Keys::Down && keyDown) {
-		  this->cat->Location = System::Drawing::Point(catStartX, catStartY + 10);
-		  move = true;
-		  lastKeyPressed = Keys::Down;
-		   keyLeft = keyUp = keyRight = true;
-	  }
-	  else if (e->KeyCode == Keys::Left && keyLeft) {
-		  this->cat->Location = System::Drawing::Point(catStartX - 10, catStartY);
-		  move = true;
-		  lastKeyPressed = Keys::Left;
-		  keyDown  = keyUp = keyRight = true;
-	  }
-	  else if (e->KeyCode == Keys::Right && keyRight) {
-		  this->cat->Location = System::Drawing::Point(catStartX + 10, catStartY);
-		  move = true;
-		  lastKeyPressed = Keys::Right;
-		  keyDown = keyLeft = keyUp  = true;
-	  }
-	  System::Collections::Generic::List<Panel^>^ rectangles = allRect();
-	  System::Collections::Generic::List<PictureBox^>^ outRectangles = allOutRect(pictureBox1, pictureBox2,
-		  pictureBox3, pictureBox4, pictureBox5, pictureBox6);
-	  Check_Bounds(rectangles, outRectangles, this->cat, this->Exit, move,
-		 EndLevel,System::Drawing::Color::Blue, lastKeyPressed);
+	}
 
-	  if (EndLevel) {
-		  ShowMessageBox(10);
-		  new_Level();
-	  }
-  }
+	private: System::Void Main_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		System::Drawing::Point catPosition = this->cat->Location;
+		int catStartX = catPosition.X; // Координата X елемента cat
+		int catStartY = catPosition.Y;
+		move = false;
+		if (e->KeyCode == Keys::Up && keyUp) {
+			this->cat->Location = System::Drawing::Point(catStartX, catStartY - 10);
+			lastKeyPressed = Keys::Up;
+			move = true;
+			keyDown = keyLeft = keyRight = true;
+		}
+		else if (e->KeyCode == Keys::Down && keyDown) {
+			this->cat->Location = System::Drawing::Point(catStartX, catStartY + 10);
+			move = true;
+			lastKeyPressed = Keys::Down;
+			keyLeft = keyUp = keyRight = true;
+		}
+		else if (e->KeyCode == Keys::Left && keyLeft) {
+			this->cat->Location = System::Drawing::Point(catStartX - 10, catStartY);
+			move = true;
+			lastKeyPressed = Keys::Left;
+			keyDown = keyUp = keyRight = true;
+		}
+		else if (e->KeyCode == Keys::Right && keyRight) {
+			this->cat->Location = System::Drawing::Point(catStartX + 10, catStartY);
+			move = true;
+			lastKeyPressed = Keys::Right;
+			keyDown = keyLeft = keyUp = true;
+		}
+		System::Collections::Generic::List<Panel^>^ rectangles = allRect();
+		System::Collections::Generic::List<PictureBox^>^ outRectangles = allOutRect(pictureBox1, pictureBox2,
+			pictureBox3, pictureBox4, pictureBox5, pictureBox6);
+		System::Collections::Generic::List<PictureBox^>^ allCoins = coinsList();
+		Check_Bounds(rectangles, outRectangles, allCoins, this->cat, this->Exit, move,
+			EndLevel, System::Drawing::Color::Blue, lastKeyPressed);
+
+		if (EndLevel) {
+			ShowMessageBox(10);
+			new_Level();
+		}
+	}
 
 
-		 public: virtual System::Collections::Generic::List<Panel^>^ allRect() override {
-			 System::Collections::Generic::List<Panel^>^ rectangles
-				 = gcnew System::Collections::Generic::List<Panel^>();
-			 rectangles->Add(Panel1);
-			 rectangles->Add(Panel2);
-			 rectangles->Add(Panel3);
-			 rectangles->Add(Panel4);
-			 rectangles->Add(Panel5);
-			 rectangles->Add(Panel6);
-			 rectangles->Add(Panel7);
-			 rectangles->Add(Panel8);
-			 rectangles->Add(Panel9);
-			 rectangles->Add(Panel10);
-			 return rectangles;
-		 }
-		
-
+	public: virtual System::Collections::Generic::List<Panel^>^ allRect() override {
+		System::Collections::Generic::List<Panel^>^ rectangles
+			= gcnew System::Collections::Generic::List<Panel^>();
+		rectangles->Add(Panel1);
+		rectangles->Add(Panel2);
+		rectangles->Add(Panel3);
+		rectangles->Add(Panel4);
+		rectangles->Add(Panel5);
+		rectangles->Add(Panel6);
+		rectangles->Add(Panel7);
+		rectangles->Add(Panel8);
+		rectangles->Add(Panel9);
+		rectangles->Add(Panel10);
+		return rectangles;
+	}
+	public: virtual System::Collections::Generic::List<PictureBox^>^ coinsList() override{
+		 System::Collections::Generic::List<PictureBox^> ^ allCoins
+			= gcnew System::Collections::Generic::List<PictureBox^>();
+		 allCoins->Add(pictureBox7);
+		 allCoins->Add(pictureBox8);
+		 allCoins->Add(pictureBox9);
+		 allCoins->Add(pictureBox10);
+		 allCoins->Add(pictureBox11);
+		 return allCoins;
+	}
+	
+		  
 		
  void new_Level()  {
 	Level2^ level2 = gcnew Level2();

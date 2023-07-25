@@ -74,6 +74,7 @@ namespace Labyrinth3 {
 	public: void Check_Bounds
 		  (System ::Collections::Generic::List<Panel^>^ rectangles,
 			  System::Collections::Generic::List<PictureBox^>^ outRectangles,
+			  System::Collections::Generic::List<PictureBox^>^ allCoins,
 		PictureBox^% cat, Panel^% Exit,
 		bool% move, bool% EndLevel,
 		Color color, Keys% lastKeyPressed) {
@@ -118,6 +119,21 @@ namespace Labyrinth3 {
 						break;
 					}
 				}
+				for (int i = 0; i <allCoins->Count; i++) {
+					Labyrinth3::Rectangle coinBounds = allCoins[i]->Bounds;
+					if (cat->Bounds.IntersectsWith(coinBounds)) {
+						allCoins[i]->Location = System::Drawing::Point(-5,-5);
+						this->Controls->Remove(allCoins[i]);
+
+						allCoins->RemoveAt(i);
+
+						plusScore(score);
+						PlayAudio(L"D:/C++/Labyrinth_3/audio/coin.wav");
+
+						i--;
+						break;
+					}
+				}
 			}
 		}
 	}
@@ -158,7 +174,14 @@ namespace Labyrinth3 {
 		 score -= 1;
 		 
 	 }
-     
-	
+	 public: void plusScore(int% score) {
+				score += 1;
+
+			}
+	public: virtual System::Collections::Generic::List<PictureBox^>^ coinsList() {
+		System::Collections::Generic::List<PictureBox^>^ coins
+			= gcnew System::Collections::Generic::List<PictureBox^>();
+		return coins;
+	}
 	};
 }

@@ -16,7 +16,7 @@ namespace Labyrinth3 {
 	/// <summary>
 	/// Summary for Level2
 	/// </summary>
-	public ref class Level2 : BaseForm
+	public ref class Level2 :BaseForm
 	{
 	public:
 		Level2(void)
@@ -76,6 +76,11 @@ namespace Labyrinth3 {
 
 	private: System::Windows::Forms::FlowLayoutPanel^ Panel14;
 	private: System::Windows::Forms::Panel^ Exit;
+	private: System::Windows::Forms::PictureBox^ pictureBox7;
+	private: System::Windows::Forms::PictureBox^ pictureBox8;
+	private: System::Windows::Forms::PictureBox^ pictureBox9;
+	private: System::Windows::Forms::PictureBox^ pictureBox10;
+	private: System::Windows::Forms::PictureBox^ pictureBox11;
 
 
 	private:
@@ -116,6 +121,11 @@ namespace Labyrinth3 {
 			this->Panel13 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->Panel14 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->Exit = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox11 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
@@ -123,6 +133,11 @@ namespace Labyrinth3 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->cat))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox6
@@ -335,12 +350,67 @@ namespace Labyrinth3 {
 			this->Exit->Size = System::Drawing::Size(130, 100);
 			this->Exit->TabIndex = 35;
 			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(245, 381);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(45, 48);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox7->TabIndex = 36;
+			this->pictureBox7->TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+			this->pictureBox8->Location = System::Drawing::Point(115, 217);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(45, 48);
+			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox8->TabIndex = 37;
+			this->pictureBox8->TabStop = false;
+			// 
+			// pictureBox9
+			// 
+			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+			this->pictureBox9->Location = System::Drawing::Point(379, 484);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(45, 48);
+			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox9->TabIndex = 38;
+			this->pictureBox9->TabStop = false;
+			// 
+			// pictureBox10
+			// 
+			this->pictureBox10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox10.Image")));
+			this->pictureBox10->Location = System::Drawing::Point(503, 54);
+			this->pictureBox10->Name = L"pictureBox10";
+			this->pictureBox10->Size = System::Drawing::Size(45, 48);
+			this->pictureBox10->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox10->TabIndex = 39;
+			this->pictureBox10->TabStop = false;
+			// 
+			// pictureBox11
+			// 
+			this->pictureBox11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox11.Image")));
+			this->pictureBox11->Location = System::Drawing::Point(379, 206);
+			this->pictureBox11->Name = L"pictureBox11";
+			this->pictureBox11->Size = System::Drawing::Size(45, 48);
+			this->pictureBox11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox11->TabIndex = 40;
+			this->pictureBox11->TabStop = false;
+			// 
 			// Level2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::RoyalBlue;
 			this->ClientSize = System::Drawing::Size(748, 659);
+			this->Controls->Add(this->pictureBox11);
+			this->Controls->Add(this->pictureBox10);
+			this->Controls->Add(this->pictureBox9);
+			this->Controls->Add(this->pictureBox8);
+			this->Controls->Add(this->pictureBox7);
 			this->Controls->Add(this->Panel11);
 			this->Controls->Add(this->Exit);
 			this->Controls->Add(this->Panel14);
@@ -375,6 +445,11 @@ namespace Labyrinth3 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->cat))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -416,7 +491,8 @@ namespace Labyrinth3 {
 			System::Collections::Generic::List<Panel^>^ rectangles = allRect();
 			System::Collections::Generic::List<PictureBox^>^ outRectangles = allOutRect(pictureBox1, pictureBox2,
 				pictureBox3, pictureBox4, pictureBox5, pictureBox6);
-			Check_Bounds(rectangles,outRectangles, this->cat, this->Exit, move,
+			System::Collections::Generic::List<PictureBox^>^ allCoins = coinsList();
+			Check_Bounds(rectangles,outRectangles,allCoins, this->cat, this->Exit, move,
 				 EndLevel, System::Drawing::Color::Aqua, lastKeyPressed);
 			if (EndLevel) {
 				ShowMessageBox(20);
@@ -448,7 +524,16 @@ namespace Labyrinth3 {
 			  level3->Show();
 			  Level2::Hide();
 		  }
-
+	public: virtual System::Collections::Generic::List<PictureBox^>^ coinsList() override {
+		System::Collections::Generic::List<PictureBox^>^ allCoins
+			= gcnew System::Collections::Generic::List<PictureBox^>();
+		allCoins->Add(pictureBox7);
+		allCoins->Add(pictureBox8);
+		allCoins->Add(pictureBox9);
+		allCoins->Add(pictureBox10);
+		allCoins->Add(pictureBox11);
+		return allCoins;
+	}
 	
 	};
 }
